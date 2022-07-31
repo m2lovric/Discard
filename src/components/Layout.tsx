@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from './Sidebar';
+import Navi from './Nav';
 
 interface LayoutProp {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface LayoutProp {
 const Layout = ({ children }: LayoutProp) => {
   return (
     <main className='flex h-screen w-full'>
-      <Sidebar />
+      <Navi />
       {children}
     </main>
   );

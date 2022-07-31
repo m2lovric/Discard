@@ -1,16 +1,21 @@
-import logo from '../assets/icons8-discord-new-48.svg';
-import ButtonNav from './ButtonNav';
+import React, { useState } from 'react';
 
 const Sidebar = () => {
+  const [show, setShow] = useState(false);
+
   return (
-    <nav className='w-20 h-full bg-gray-800'>
-      <ul className='list-none w-full flex flex-col items-center mt-5 '>
-        <button className='bg-indigo-600 rounded-2xl w-14 h-14 flex items-center justify-center'>
-          <img src={logo} alt='logo' className='w-9 h-9' />
-        </button>
-        <ButtonNav path={logo} alt='logo' />
-      </ul>
-    </nav>
+    <aside className='w-1/6 bg-gray-700'>
+      <div className='h-32 w-full bg-slate-100'>cover img</div>
+      <section>
+        <h5 onClick={() => setShow(!show)}>Topic1</h5>
+        <ul className={`${show ? 'block' : 'hidden'} `}>
+          <li>smth</li>
+          <li>smth2</li>
+          <li>smth3</li>
+          <li>smth4</li>
+        </ul>
+      </section>
+    </aside>
   );
 };
 
